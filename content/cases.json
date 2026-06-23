@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "powder-bagging-line",
+      "name": "粉末颗粒物料自动装袋线体设计",
+      "image": "assets/images/cases/powder-bagging-line.svg",
+      "type": "自动包装线设计",
+      "description": "围绕颗粒物料输送、定量下料、袋口定位和装袋流程，进行线体结构方案与关键机构设计。",
+      "coreDesign": "物料输送、定量下料、袋口定位、装袋机构、线体布局。",
+      "deliverables": "3D整线模型、关键机构设计、工程图、BOM、标准件清单。",
+      "customers": "包装设备公司、制造企业、自动化集成商。",
+      "featured": true,
+      "order": 1,
+      "visible": true
+    },
+    {
+      "id": "titanium-blue-cleaning",
+      "name": "钛蓝清洗设备设计",
+      "image": "assets/images/cases/titanium-blue-cleaning.svg",
+      "type": "非标清洗设备设计",
+      "description": "根据清洗工艺和设备空间要求，完成清洗工位布局、箱体结构、上下料机构和外罩结构设计。",
+      "coreDesign": "清洗工位布局、上下料机构、箱体结构、执行机构、外罩钣金。",
+      "deliverables": "整机3D模型、装配图、加工图、BOM、标准件清单。",
+      "customers": "清洗设备公司、制造型企业、机械加工企业。",
+      "featured": true,
+      "order": 2,
+      "visible": true
+    },
+    {
+      "id": "composite-broaching",
+      "name": "复合材料拉削设备设计",
+      "image": "assets/images/cases/composite-broaching.svg",
+      "type": "非标加工辅助设备设计",
+      "description": "围绕复合材料加工过程中的定位、夹持、支撑和拉削动作，进行设备结构和执行机构设计。",
+      "coreDesign": "夹持定位、拉削执行机构、支撑结构、安全防护、结构稳定性优化。",
+      "deliverables": "整机结构设计、关键机构设计、工程图、BOM、结构优化建议。",
+      "customers": "设备研发团队、机械加工企业、项目型工程公司。",
+      "featured": true,
+      "order": 3,
+      "visible": true
+    },
+    {
+      "id": "shaver-assembly-line",
+      "name": "剃须刀自动组装线设计",
+      "image": "assets/images/cases/shaver-assembly-line.svg",
+      "type": "自动化装配产线设计",
+      "description": "围绕多工位装配流程，进行工位拆解、线体布局、节拍规划和设备协同设计。",
+      "coreDesign": "多工位布局、工位拆解、节拍分析、夹具设计、设备协同、输送规划。",
+      "deliverables": "产线布局方案、单机设备设计、工位机构设计、工程图、BOM。",
+      "customers": "自动化设备公司、3C制造企业、产线集成商。",
+      "featured": true,
+      "order": 4,
+      "visible": true
+    }
+  ]
+}

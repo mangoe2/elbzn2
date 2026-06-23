@@ -1,0 +1,50 @@
+{
+  "banner": {
+    "image": "assets/images/banner/industrial-banner.svg",
+    "title": "非标自动化设备设计与机械设计项目服务商",
+    "subtitle": "承接自动化设备设计、工装夹具设计、3D整机设计、工程图/BOM输出、标准件选型与自动化产线方案设计",
+    "primaryButton": { "text": "提交设计需求", "link": "contact.html" },
+    "secondaryButton": { "text": "查看业务范围", "link": "services.html" },
+    "tags": ["非标自动化设计", "机械设计外包", "工程图BOM输出"]
+  },
+  "homeServiceIds": [
+    "non-standard-automation",
+    "production-line",
+    "fixture",
+    "3d-machine",
+    "drawing-bom",
+    "standard-parts"
+  ],
+  "homeCaseIds": [
+    "powder-bagging-line",
+    "titanium-blue-cleaning",
+    "composite-broaching",
+    "shaver-assembly-line"
+  ],
+  "advantages": [
+    {
+      "title": "聚焦非标自动化设计",
+      "description": "围绕制造现场和项目交付，提供可落地的机械结构设计。",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "title": "支持整机3D设计",
+      "description": "从方案到关键机构、外罩钣金和装配空间进行系统设计。",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "title": "工程图/BOM输出",
+      "description": "整理加工、装配、采购所需工程资料，便于后续加工装配。",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "title": "项目修改配合",
+      "description": "可配合评审、加工、装配阶段进行结构修改和资料补全。",
+      "visible": true,
+      "order": 4
+    }
+  ]
+}

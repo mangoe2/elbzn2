@@ -898,3 +898,46 @@ a {
     font-size: 28px;
   }
 }
+.hero-banner:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--banner-image);
+  background-size: cover;
+  background-position: center right;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.business-image,
+.service-visual,
+.case-image {
+  background-size: cover;
+  background-position: center;
+}
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.contact-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--orange);
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(14, 30, 48, 0.07);
+}
+.contact-card strong {
+  display: block;
+  color: var(--navy);
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.contact-card p {
+  margin: 0;
+  color: #536273;
+}
+@media (max-width: 860px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}

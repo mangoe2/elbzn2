@@ -39,83 +39,23 @@
         </div>
       </section>
       <section class="section">
-        <div class="container content-card">
-          <form id="demandForm" class="form-grid">
-            <label>联系人<input required name="name" /></label
-            ><label>公司名称<input name="company" /></label
-            ><label>手机号<input required name="phone" /></label
-            ><label>微信号<input name="wechat" /></label
-            ><label>所在城市<input name="city" /></label
-            ><label
-              >需求类型<select name="type">
-                <option>非标自动化设备设计</option>
-                <option>自动化产线设计</option>
-                <option>工装夹具/治具设计</option>
-                <option>3D整机设计</option>
-                <option>工程图/BOM输出</option>
-                <option>标准件选型</option>
-                <option>设备改造优化</option>
-                <option>其他</option>
-              </select></label
-            ><label
-              >当前项目阶段<select name="stage">
-                <option>只有初步想法</option>
-                <option>已有产品/样品</option>
-                <option>已有工艺流程</option>
-                <option>已有初步方案</option>
-                <option>已有3D模型，需要深化</option>
-                <option>已有模型，需要出工程图</option>
-                <option>项目已在做，需要外包支持</option>
-              </select></label
-            >
-            <fieldset>
-              <legend>是否有资料</legend>
-              <div class="check-grid">
-                <label><input type="checkbox" /> 产品图纸</label
-                ><label><input type="checkbox" /> 样品照片</label
-                ><label><input type="checkbox" /> 工艺流程</label
-                ><label><input type="checkbox" /> 设备参考图</label
-                ><label><input type="checkbox" /> 现场尺寸</label
-                ><label><input type="checkbox" /> 3D模型</label
-                ><label><input type="checkbox" /> 暂时没有</label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>预计交付内容</legend>
-              <div class="check-grid">
-                <label><input type="checkbox" /> 方案设计</label
-                ><label><input type="checkbox" /> 3D模型</label
-                ><label><input type="checkbox" /> 工程图</label
-                ><label><input type="checkbox" /> BOM</label
-                ><label><input type="checkbox" /> 标准件选型</label
-                ><label><input type="checkbox" /> 结构优化</label
-                ><label><input type="checkbox" /> 全套设计资料</label>
-              </div>
-            </fieldset>
-            <label
-              >项目周期<select>
-                <option>7天内</option>
-                <option>15天内</option>
-                <option>30天内</option>
-                <option>1-2个月</option>
-                <option>可沟通</option>
-              </select></label
-            ><label
-              >预算范围<select>
-                <option>3000元以内</option>
-                <option>3000-10000元</option>
-                <option>10000-30000元</option>
-                <option>30000元以上</option>
-                <option>需要评估</option>
-              </select></label
-            ><label class="form-full"
-              >需求描述<textarea required></textarea>
-            </label>
-            <p class="notice form-full">
-              资料上传提示：请通过微信或邮箱发送产品图纸、参考图片、工艺流程、现场尺寸等资料。
-            </p>
-            <button class="btn-primary" type="submit">提交需求</button>
-          </form>
+        <div class="container contact-cards" id="contactContent">
+          <article class="contact-card">
+            <strong>联系电话</strong>
+            <p>提交需求后工程师对接</p>
+          </article>
+          <article class="contact-card">
+            <strong>微信</strong>
+            <p>请添加微信沟通项目资料</p>
+          </article>
+          <article class="contact-card">
+            <strong>邮箱</strong>
+            <p>待补充</p>
+          </article>
+          <article class="contact-card">
+            <strong>地址</strong>
+            <p>湖南省长沙市</p>
+          </article>
         </div>
       </section>
     </main>
