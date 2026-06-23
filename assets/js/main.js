@@ -114,28 +114,15 @@
     }
   }
 
-  function serviceSlide(service, index) {
-    var items = (service.items || [])
-      .map(function (item) {
-        return "<li>" + escapeHtml(item) + "</li>";
-      })
-      .join("");
+  function serviceCard(service) {
     return (
-      '<article class="business-slide' +
-      (index === 0 ? " active" : "") +
-      '" data-slide="' +
-      index +
-      '"><div class="business-image"' +
+      '<article class="product-card"><a class="product-image-link" href="services.html"><div class="product-visual"' +
       imgStyle(service.image) +
-      "><span>" +
-      escapeHtml(service.name) +
-      '</span></div><div class="business-copy"><span class="eyebrow">BUSINESS RANGE</span><h3>' +
+      '></div></a><div class="product-body"><h3>' +
       escapeHtml(service.name) +
       "</h3><p>" +
       escapeHtml(service.summary) +
-      "</p><ul>" +
-      items +
-      '</ul><a class="btn-primary" href="services.html">查看详情</a></div></article>'
+      '</p><a class="text-link" href="services.html">查看详情</a></div></article>'
     );
   }
 
@@ -172,22 +159,9 @@
         return serviceMap[id];
       })
       .filter(Boolean);
-    var slides = document.querySelector(".business-slides");
-    var dots = document.querySelector(".slider-dots");
-    if (slides && homeServices.length) {
-      slides.innerHTML = homeServices.map(serviceSlide).join("");
-      dots.innerHTML = homeServices
-        .map(function (_, i) {
-          return (
-            '<button class="slider-dot' +
-            (i === 0 ? " active" : "") +
-            '" type="button" aria-label="切换到第' +
-            (i + 1) +
-            '项"></button>'
-          );
-        })
-        .join("");
-      initBusinessSlider();
+    var homeGrid = document.querySelector("#homeServices");
+    if (homeGrid && homeServices.length) {
+      homeGrid.innerHTML = homeServices.map(serviceCard).join("");
     }
     var caseMap = {};
     sortVisible(data.cases).forEach(function (item) {
@@ -211,7 +185,9 @@
       advantageGrid.innerHTML = sortVisible(data.home.advantages)
         .map(function (item) {
           return (
-            "<div><strong>" +
+            "<div><span>" +
+            escapeHtml(item.icon || "✓") +
+            "</span><strong>" +
             escapeHtml(item.title) +
             "</strong><p>" +
             escapeHtml(item.description) +
@@ -291,86 +267,6 @@
       "</p></article>";
   }
 
-  function initBusinessSlider() {
-    var slider = document.querySelector(".business-slider");
-    if (!slider || slider.dataset.ready === "true") return;
-    slider.dataset.ready = "true";
-    var slides = Array.prototype.slice.call(
-      slider.querySelectorAll(".business-slide"),
-    );
-    var dots = Array.prototype.slice.call(
-      slider.querySelectorAll(".slider-dot"),
-    );
-    var prev = slider.querySelector(".slider-prev");
-    var next = slider.querySelector(".slider-next");
-    var index = 0;
-    var timer = null;
-    var startX = 0;
-
-    function refresh() {
-      slides = Array.prototype.slice.call(
-        slider.querySelectorAll(".business-slide"),
-      );
-      dots = Array.prototype.slice.call(slider.querySelectorAll(".slider-dot"));
-    }
-    function showSlide(nextIndex) {
-      refresh();
-      if (!slides.length) return;
-      index = (nextIndex + slides.length) % slides.length;
-      slides.forEach(function (slide, i) {
-        slide.classList.toggle("active", i === index);
-      });
-      dots.forEach(function (dot, i) {
-        dot.classList.toggle("active", i === index);
-      });
-    }
-    function startAuto() {
-      stopAuto();
-      timer = window.setInterval(function () {
-        showSlide(index + 1);
-      }, 5000);
-    }
-    function stopAuto() {
-      if (timer) window.clearInterval(timer);
-    }
-
-    if (prev)
-      prev.addEventListener("click", function () {
-        showSlide(index - 1);
-        startAuto();
-      });
-    if (next)
-      next.addEventListener("click", function () {
-        showSlide(index + 1);
-        startAuto();
-      });
-    slider.addEventListener("click", function (e) {
-      if (e.target.classList.contains("slider-dot")) {
-        refresh();
-        showSlide(dots.indexOf(e.target));
-        startAuto();
-      }
-    });
-    slider.addEventListener("mouseenter", stopAuto);
-    slider.addEventListener("mouseleave", startAuto);
-    slider.addEventListener(
-      "touchstart",
-      function (e) {
-        startX = e.touches[0].clientX;
-      },
-      { passive: true },
-    );
-    slider.addEventListener("touchend", function (e) {
-      var endX = e.changedTouches[0].clientX;
-      if (Math.abs(endX - startX) > 45) {
-        showSlide(endX < startX ? index + 1 : index - 1);
-        startAuto();
-      }
-    });
-    showSlide(0);
-    startAuto();
-  }
-
   loadContent()
     .then(function (data) {
       renderHeaderContact(data.contact);
@@ -382,10 +278,7 @@
     })
     .catch(function (error) {
       console.warn("静态内容 JSON 加载失败，已保留 HTML 默认内容。", error);
-      initBusinessSlider();
     });
-
-  if (page === "home") initBusinessSlider();
 
   var topBtn = document.querySelector(".back-top");
   window.addEventListener("scroll", function () {

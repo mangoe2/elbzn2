@@ -941,3 +941,234 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* Visual Refactor V2 */
+.site-header {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+}
+.hero-banner {
+  min-height: 700px;
+  background:
+    radial-gradient(
+      circle at 78% 42%,
+      rgba(20, 93, 160, 0.38),
+      transparent 34%
+    ),
+    linear-gradient(108deg, #061a31 0%, #092341 48%, #145da0 100%);
+}
+.hero-banner:after {
+  opacity: 0.28;
+  mix-blend-mode: screen;
+}
+.hero-content {
+  min-height: 700px;
+  grid-template-columns: 0.95fr 1.05fr;
+}
+.hero-copy:before {
+  content: "二里半智能制造有限公司";
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 13px;
+  border-left: 4px solid var(--orange);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.equipment-panel {
+  min-height: 455px;
+  background-image:
+    linear-gradient(rgba(8, 33, 63, 0.1), rgba(8, 33, 63, 0.2)),
+    var(--banner-image);
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+.equipment-panel > * {
+  display: none;
+}
+.business-section {
+  background: linear-gradient(180deg, #fff 0%, #f3f6f9 100%);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.product-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 32px rgba(14, 30, 48, 0.08);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+.product-card:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s ease;
+}
+.product-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(20, 93, 160, 0.35);
+  box-shadow: 0 22px 44px rgba(14, 30, 48, 0.14);
+}
+.product-card:hover:after {
+  transform: scaleX(1);
+}
+.product-card:hover .product-visual {
+  transform: scale(1.045);
+}
+.product-image-link {
+  display: block;
+  overflow: hidden;
+}
+.product-visual {
+  height: 220px;
+  margin: 0;
+  border: 0;
+  background-color: #dce5ee;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.35s ease;
+}
+.product-visual:before,
+.product-visual:after {
+  display: none;
+}
+.product-body {
+  padding: 22px 22px 26px;
+}
+.product-body h3,
+.product-card h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 21px;
+}
+.product-body p,
+.product-card p {
+  color: #536273;
+  margin: 0 0 14px;
+}
+.case-list {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: stretch;
+}
+.case-media-card {
+  display: block;
+  overflow: hidden;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+.case-media-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(20, 93, 160, 0.35);
+  box-shadow: 0 22px 46px rgba(14, 30, 48, 0.14);
+}
+.case-media-card:hover .case-image {
+  transform: scale(1.035);
+}
+.case-image {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  border-right: 0;
+  border-bottom: 4px solid var(--orange);
+  transition: transform 0.35s ease;
+}
+.case-image:before,
+.case-image:after {
+  display: none;
+}
+.case-body {
+  background: #fff;
+}
+.advantages-section {
+  background: linear-gradient(180deg, #fff 0%, #eef2f6 100%);
+}
+.advantage-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.advantage-grid div {
+  position: relative;
+  border: 1px solid var(--line);
+  border-left: 0;
+  background: #fff;
+  padding: 26px 24px 28px;
+}
+.advantage-grid div:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--orange);
+}
+.advantage-grid span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  padding: 0 8px;
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: #fff;
+  font-weight: 900;
+}
+.contact-strip {
+  background:
+    linear-gradient(110deg, rgba(6, 26, 49, 0.98), rgba(12, 57, 96, 0.96)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size:
+    auto,
+    42px 42px;
+}
+.contact-strip-inner:after {
+  content: "电话：提交需求后工程师对接\A微信：添加微信发送项目资料\A地址：湖南省长沙市";
+  white-space: pre-line;
+  color: #dce8f3;
+  border-left: 4px solid var(--orange);
+  padding-left: 18px;
+  line-height: 2;
+  min-width: 260px;
+}
+@media (max-width: 1100px) {
+  .product-grid,
+  .case-list,
+  .advantage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  .hero-banner,
+  .hero-content {
+    min-height: auto;
+  }
+  .equipment-panel {
+    min-height: 300px;
+  }
+  .product-grid,
+  .case-list,
+  .advantage-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-visual {
+    height: 210px;
+  }
+  .contact-strip-inner:after {
+    display: block;
+    margin-top: 22px;
+  }
+}
