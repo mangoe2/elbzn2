@@ -1,0 +1,12 @@
+{
+  "phone": "提交需求后工程师对接",
+  "wechat": "请添加微信沟通项目资料",
+  "email": "待补充",
+  "address": "湖南省长沙市",
+  "recordNumber": "备案后填写",
+  "floatingButtons": [
+    { "text": "电话咨询", "link": "tel:#" },
+    { "text": "微信沟通", "link": "javascript:void(0)" },
+    { "text": "提交需求", "link": "contact.html" }
+  ]
+}
