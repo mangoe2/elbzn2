@@ -1,0 +1,75 @@
+{
+  "banner": {
+    "image": "assets/images/banner/industrial-banner.svg",
+    "title": "非标自动化设备设计与机械设计项目服务商",
+    "subtitle": "承接自动化设备设计、工装夹具设计、3D整机设计、工程图/BOM输出、标准件选型与自动化产线方案设计",
+    "primaryButton": {
+      "text": "查看业务范围",
+      "link": "services.html"
+    },
+    "secondaryButton": {
+      "text": "提交项目需求",
+      "link": "contact.html"
+    },
+    "tags": ["非标自动化设计", "机械设计外包", "工程图BOM输出"],
+    "company": "二里半智能制造有限公司"
+  },
+  "homeServiceIds": [
+    "non-standard-automation",
+    "production-line",
+    "fixture",
+    "3d-machine",
+    "drawing-bom",
+    "standard-parts"
+  ],
+  "homeCaseIds": [
+    "powder-bagging-line",
+    "titanium-blue-cleaning",
+    "composite-broaching",
+    "shaver-assembly-line"
+  ],
+  "advantages": [
+    {
+      "title": "3D整机模型",
+      "description": "输出完整设备3D结构模型，便于评审、加工和装配沟通。",
+      "icon": "3D",
+      "visible": true,
+      "order": 1
+    },
+    {
+      "title": "零件工程图",
+      "description": "提供加工所需尺寸、公差、材料和表面处理等图纸信息。",
+      "icon": "图",
+      "visible": true,
+      "order": 2
+    },
+    {
+      "title": "装配工程图",
+      "description": "整理总装与部装图纸，辅助现场装配和问题排查。",
+      "icon": "装",
+      "visible": true,
+      "order": 3
+    },
+    {
+      "title": "BOM清单",
+      "description": "输出加工件、标准件、外购件清单，便于采购和成本核算。",
+      "icon": "BOM",
+      "visible": true,
+      "order": 4
+    },
+    {
+      "title": "标准件选型表",
+      "description": "整理导轨、丝杆、气动、传动等标准件规格与选型依据。",
+      "icon": "选",
+      "visible": true,
+      "order": 5
+    },
+    {
+      "title": "结构优化建议",
+      "description": "围绕加工、装配、维护空间与成本控制提出结构优化建议。",
+      "icon": "优",
+      "visible": true,
+      "order": 6
+    }
+  ]
+}
