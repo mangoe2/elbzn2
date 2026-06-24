@@ -115,6 +115,12 @@
   }
 
   function serviceCard(service) {
+    var keywords = (service.keywords || [])
+      .slice(0, 3)
+      .map(function (word) {
+        return "<span>" + escapeHtml(word) + "</span>";
+      })
+      .join("");
     return (
       '<article class="product-card"><a class="product-image-link" href="services.html"><div class="product-visual"' +
       imgStyle(service.image) +
@@ -122,29 +128,42 @@
       escapeHtml(service.name) +
       "</h3><p>" +
       escapeHtml(service.summary) +
-      '</p><a class="text-link" href="services.html">查看详情</a></div></article>'
+      '</p><div class="keyword-tags">' +
+      keywords +
+      '</div><a class="text-link" href="services.html">查看详情</a></div></article>'
     );
+  }
+
+  function caseKeywords(text) {
+    return String(text || "")
+      .replace(/[。；;]/g, "、")
+      .split("、")
+      .map(function (item) {
+        return item.trim();
+      })
+      .filter(Boolean)
+      .slice(0, 4)
+      .map(function (item) {
+        return "<span>" + escapeHtml(item) + "</span>";
+      })
+      .join("");
   }
 
   function caseCard(item) {
     return (
       '<article class="case-media-card"><div class="case-image"' +
       imgStyle(item.image) +
-      "><em>" +
-      escapeHtml(item.type) +
-      '</em></div><div class="case-body"><span class="case-tag">' +
+      '> </div><div class="case-body"><span class="case-tag">' +
       escapeHtml(item.type) +
       "</span><h3>" +
       escapeHtml(item.name) +
       "</h3><p>" +
       escapeHtml(item.description) +
-      "</p><dl><dt>核心设计内容</dt><dd>" +
-      escapeHtml(item.coreDesign) +
-      "</dd><dt>交付成果</dt><dd>" +
-      escapeHtml(item.deliverables) +
-      "</dd><dt>适用客户 / 行业</dt><dd>" +
-      escapeHtml(item.customers) +
-      '</dd></dl><a class="text-link" href="contact.html">提交类似需求</a></div></article>'
+      '</p><div class="case-meta"><strong>核心设计</strong><div>' +
+      caseKeywords(item.coreDesign) +
+      '</div></div><div class="case-meta"><strong>交付成果</strong><div>' +
+      caseKeywords(item.deliverables) +
+      '</div></div><a class="btn-outline" href="contact.html">提交类似需求</a></div></article>'
     );
   }
 
