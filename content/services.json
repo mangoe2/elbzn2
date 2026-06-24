@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": "non-standard-automation",
+      "name": "非标自动化设备设计",
+      "image": "assets/images/services/non-standard-automation.svg",
+      "summary": "围绕制造现场工艺、节拍、空间和交付资料要求，完成非标设备整机结构方案与关键机构设计。",
+      "items": [
+        "自动上料与搬运机构",
+        "自动组装与检测设备",
+        "清洗、贴标、包装专机",
+        "安全防护与维护空间设计"
+      ],
+      "order": 1,
+      "visible": true,
+      "keywords": ["非标专机", "整机结构", "交付资料"]
+    },
+    {
+      "id": "production-line",
+      "name": "自动化产线方案设计",
+      "image": "assets/images/services/production-line.svg",
+      "summary": "从产品工艺、产能目标、工位节拍和现场空间出发，规划多设备协同的自动化产线方案。",
+      "items": [
+        "产线布局与工位拆解",
+        "节拍分析与物流输送",
+        "多设备协同方案",
+        "老产线改造与优化"
+      ],
+      "order": 2,
+      "visible": true,
+      "keywords": ["产线布局", "节拍分析", "设备协同"]
+    },
+    {
+      "id": "fixture",
+      "name": "工装夹具 / 治具设计",
+      "image": "assets/images/services/fixture.svg",
+      "summary": "针对产品定位、装配、检测、焊接、搬运等工序，设计便于加工装配和现场使用的夹治具。",
+      "items": [
+        "产品定位夹具",
+        "检测治具与装配治具",
+        "搬运夹爪与吸附夹具",
+        "焊接夹具与辅助工装"
+      ],
+      "order": 3,
+      "visible": true,
+      "keywords": ["定位夹具", "检测治具", "夹爪机构"]
+    },
+    {
+      "id": "3d-machine",
+      "name": "3D整机结构设计",
+      "image": "assets/images/services/3d-machine.svg",
+      "summary": "基于方案与工艺要求进行整机布局、机构设计、运动关系校核和外罩钣金设计。",
+      "items": [
+        "整机3D布局",
+        "关键机构与运动关系",
+        "外罩钣金与安全防护",
+        "装配空间与维护空间校核"
+      ],
+      "order": 4,
+      "visible": true,
+      "keywords": ["3D建模", "运动机构", "钣金外罩"]
+    },
+    {
+      "id": "drawing-bom",
+      "name": "工程图 / BOM 输出",
+      "image": "assets/images/services/drawing-bom.svg",
+      "summary": "根据3D模型输出加工、装配、采购所需的完整工程资料，帮助项目进入加工装配阶段。",
+      "items": [
+        "零件工程图与装配图",
+        "钣金展开图",
+        "加工件与标准件清单",
+        "外购件BOM整理"
+      ],
+      "order": 5,
+      "visible": true,
+      "keywords": ["工程图", "BOM清单", "加工资料"]
+    },
+    {
+      "id": "standard-parts",
+      "name": "标准件选型与结构优化",
+      "image": "assets/images/services/standard-parts.svg",
+      "summary": "结合负载、速度、空间、成本和维护要求，完成标准件选型并优化机械结构。",
+      "items": [
+        "导轨丝杆与传动件选型",
+        "气动元件与执行机构选型",
+        "连接结构与支撑结构优化",
+        "成本、加工与装配优化"
+      ],
+      "order": 6,
+      "visible": true,
+      "keywords": ["标准件", "结构优化", "成本控制"]
+    }
+  ]
+}
