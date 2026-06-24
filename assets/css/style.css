@@ -1296,3 +1296,45 @@ body[data-page="home"] .hero-content {
     background: #061a31;
   }
 }
+/* Homepage visual completeness adjustments */
+.hero-copy:before {
+  display: none;
+}
+.hero-company {
+  display: inline-block;
+  margin: 0 0 14px;
+  padding: 7px 13px;
+  border-left: 4px solid var(--orange);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.hero-banner {
+  min-height: 680px;
+}
+.hero-content {
+  min-height: 680px;
+}
+.product-visual,
+.case-image {
+  aspect-ratio: 16 / 9;
+}
+.product-visual {
+  height: auto;
+}
+.case-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.advantages-section .advantage-grid div {
+  min-height: 190px;
+}
+@media (max-width: 860px) {
+  .hero-banner,
+  .hero-content {
+    min-height: auto;
+  }
+}

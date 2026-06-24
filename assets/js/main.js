@@ -88,10 +88,12 @@
     var hero = document.querySelector(".hero-banner");
     if (hero && banner.image)
       hero.style.setProperty("--banner-image", "url(" + banner.image + ")");
+    var company = document.querySelector(".hero-company");
     var h1 = document.querySelector(".hero-copy h1");
     var desc = document.querySelector(".hero-desc");
     var tags = document.querySelector(".hero-tags");
     var actions = document.querySelector(".hero-actions");
+    if (company) company.textContent = banner.company || company.textContent;
     if (h1) h1.textContent = banner.title || h1.textContent;
     if (desc) desc.textContent = banner.subtitle || desc.textContent;
     if (tags)
